@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+    <a href="/testing">Testing</a><br>
+    <div class="row">
+        <!--<p>User: {{ app_info["username"] }}</p>-->
+        <!--<p>All users: {{ app_info["allusers"] }}</p>-->
+        <!--<p>Logged: {{ app_info["logged"] }}</p>-->
+        <!--<p>Game on: {{ app_info["game"] }}</p>-->
+        <!--<p>Attempt: {{ attempt }}</p>-->
+        {% for message in get_flashed_messages() %}
+            {{ message }}
+        {% endfor %}
+        <div class="col-md-12 main min-height-main">
+            <h3>Game Description</h3>
+            <p>Given a word prompt, the object of Sphinxi is to come up with a similar word that is different from the original word. Players are given a score of 1 to 10 for each round, with the points tallied at the end of 10 rounds. Your games and scores will be stored in the system. The highest scorers will have their usernames inscribed in the Hall of Fame!</p>
+
+            <p>More information can be found in the <a href="/about"><strong>About</strong></a> section of this
+            game.</p>
+
+            <h3>Instructions</h3>
+            <p>Please register if this is your first time.</p>
+            <p>If you have registered, please use your username to login. Your username is unique and its
+            sole purpose is to keep track of the games you played and the points you scored. The user name
+            can be any combination of letters and numbers.<br>
+            Once you log in you will be at your user page. There you will see a list of games played
+            and the points scored. You can start a new game from that page.</p>
+            <p>More information can be found in the <a href="/about"><strong>About</strong></a> section of this
+            game.</p>
+        </div>
+    </div>
+{% endblock %}

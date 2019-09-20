@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="row">
+        <p>User: {{ app_info["username"] }}</p>
+        <p>All users: {{ app_info["allusers"] }}</p>
+        <p>Logged: {{ app_info["logged"] }}</p>
+        <div class="col-md-12 main min-height-main">
+            <h3>About</h3>
+            <p>Sphinxi is a word similarities game. Given a word prompt, the player has to come up with the first word that comes to mind that is different than the original word. </p>
+            <p>Sphinxi was built as part of my capstone project at General Assembly's Data Science Immersive.</p>
+        </div>
+    </div>
+{% endblock %}
