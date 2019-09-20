@@ -490,7 +490,7 @@ def game():
 
                 answer = answer.strip()         # Strip trailing spaces
 
-                if answer.lower() == current_similarity[2].lower(): # answer correct
+                if answer.lower() in current_similarity[2].lower().replace("_", " "): # answer correct
                     gained_points += 10
                     wrong_answers = []
                     attemp = 1                  # First attempt of
@@ -526,7 +526,7 @@ def game():
                     answer += item + " "
                 answer = answer.strip()         # Strip trailing spaces
 
-                if answer.lower() == current_similarity[2].lower(): # Answer correct
+                if answer.lower() in current_similarity[2].lower().replace("_", " "): # Answer correct
                     gained_points += 6          # Gain points
                     attempt = 1                 # Reset attempt
                     points = 10
@@ -565,7 +565,7 @@ def game():
                     answer += item + " "
                 answer = answer.strip()         # Strip trailing spaces
 
-                if answer.lower() == current_similarity[2].lower():  # Answer correct
+                if answer.lower() in current_similarity[2].lower().replace("_", " "):  # Answer correct
                     gained_points += 2           # Gain points
                     attempt = 1                  # Reset attempt
                     points = 10
